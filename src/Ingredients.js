@@ -5,7 +5,10 @@ const Ingredients = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        props.createMeal();
+        console.log(event);
+        props.meal();
+        console.log(document.getElementById("meat").innerText)
+        console.log(document.getElementById("meat").textContent)
       }}
     >
       <label htmlFor="meat">Choose a meat:</label>
