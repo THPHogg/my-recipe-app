@@ -13,14 +13,14 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Ingredients meal={this.createMeal}/>
+        <Ingredients meal={this.createMeal} />
         <Meal />
       </div>
     );
   }
 
-  createMeal = () => {
-    console.log('hello');
+  createMeal = (ingredients) => {
+    console.log(ingredients);
   };
 }
 
