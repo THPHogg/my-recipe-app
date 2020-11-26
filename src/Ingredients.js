@@ -2,8 +2,13 @@ import React from 'react';
 
 const Ingredients = (props) => {
   return (
-    <form onSubmit="createMeal()">
-      <label for="meat">Choose a meat:</label>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        props.createMeal();
+      }}
+    >
+      <label htmlFor="meat">Choose a meat:</label>
       <br></br>
       <select name="meat" id="meat">
         <option value="Beef">Beef</option>
@@ -12,7 +17,7 @@ const Ingredients = (props) => {
       </select>
       <br></br>
       <br></br>
-      <label for="veg">Choose a vegetable:</label>
+      <label htmlFor="veg">Choose a vegetable:</label>
       <br></br>
       <select name="veg" id="veg">
         <option value="Tomato">Tomato</option>
@@ -21,7 +26,7 @@ const Ingredients = (props) => {
       </select>
       <br></br>
       <br></br>
-      <label for="carbs">Choose a carbohydrate:</label>
+      <label htmlFor="carbs">Choose a carbohydrate:</label>
       <br></br>
       <select name="carbs" id="carbs">
         <option value="Pasta">Pasta</option>
@@ -30,7 +35,7 @@ const Ingredients = (props) => {
       </select>
       <br></br>
       <br></br>
-      <label for="submit">Create your meal:</label>
+      <label htmlFor="submit">Create your meal:</label>
       <br></br>
       <button id="submit" type="submit">
         Create

@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   createMeal = () => {
-    this.setState({ meal: 'Paella' });
+    console.log('hello');
   };
 }
 
