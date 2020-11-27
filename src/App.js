@@ -52,8 +52,13 @@ class App extends React.Component {
   }
 
   createMeal = (ingredients) => {
-    console.log(ingredients);
-  };
+    Object.values(ingredients)
+    Object.entries(meals).filter(meal => {
+      console.log(meal[1]);
+      if (JSON.stringify(meal[1]) === JSON.stringify(Object.values(ingredients))) console.log(meal[0])
+      return true;
+    });
+  }
 }
 
 export default App;
