@@ -9,7 +9,6 @@ class Ingredients extends React.Component {
 
   handleChange = (event) => {
     const { value } = event.target;
-    console.log(value);
     this.setState({ [event.target.id]: value });
   };
 
@@ -40,7 +39,7 @@ class Ingredients extends React.Component {
         <select onChange={this.handleChange} name="veg" id="veg">
           <option value="Tomato">Tomato</option>
           <option value="Peas">Peas</option>
-          <option value="Carrots">Carrots</option>
+          <option value="Carrot">Carrot</option>
         </select>
         <br></br>
         <br></br>
@@ -49,7 +48,7 @@ class Ingredients extends React.Component {
         <br></br>
         <select onChange={this.handleChange} name="carbs" id="carbs">
           <option value="Pasta">Pasta</option>
-          <option value="Potatoes">Potatoes</option>
+          <option value="Potato">Potato</option>
           <option value="Rice">Rice</option>
         </select>
         <br></br>
