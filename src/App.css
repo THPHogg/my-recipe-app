@@ -7,6 +7,7 @@ header {
   text-align: center;
   width: 30%;
   margin: auto;
+  font-size: 20px;
 }
 
 p {
@@ -21,4 +22,21 @@ p {
   padding: 1em 2em;
   border-radius: 15px;
   font-size: 20px;
+}
+
+h2 {
+  opacity: 0;
+  text-align: center;
+}
+
+#mealImg {
+  opacity: 0;
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valid {
+  opacity: 1;
 }

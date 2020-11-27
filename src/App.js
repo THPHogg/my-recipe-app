@@ -4,39 +4,137 @@ import Header from './Header';
 import Ingredients from './Ingredients';
 import React from 'react';
 
-const meals = {
-  'Penne Pasta with Meat Sauce': ['Beef', 'Tomato', 'Pasta'],
-  'Chicken and tomato pasta bake recipe': ['Chicken', 'Tomato', 'Pasta'],
-  'Pasta with Braised Pork': ['Pork', 'Tomato', 'Pasta'],
-  'Rigatoni with slow-cooked beef and peas': ['Beef', 'Peas', 'Pasta'],
-  'Creamy chicken and pea carbonara': ['Chicken', 'Peas', 'Pasta'],
-  'Lemon Pork Medallions with Pasta and Peas': ['Pork', 'Peas', 'Pasta'],
-  'Beef and Carrot Ragu': ['Beef', 'Carrot', 'Pasta'],
-  'Chicken Pasta in Carrot Sauce': ['Chicken', 'Carrot', 'Pasta'],
-  'Pork Stew With Pasta': ['Pork', 'Carrot', 'Pasta'],
-  'Italian Beef & Potato Stew': ['Beef', 'Tomato', 'Potato'],
-  'Paprika Chicken with Potatoes and Tomatoes': ['Chicken', 'Tomato', 'Potato'],
-  'Pork Chops In Tomato Sauce': ['Pork', 'Tomato', 'Potato'],
-  'Keema Aloo': ['Beef', 'Peas', 'Potato'],
-  'Chicken Breasts with Potatoes and Mashed Peas': [
-    'Chicken',
-    'Peas',
-    'Potato',
-  ],
-  'Diced pork with potato and peas': ['Pork', 'Peas', 'Potato'],
-  'Pot Roast with Potatoes and Carrots': ['Beef', 'Carrot', 'Potato'],
-  'Baked Chicken, Potatoes, Carrots and Herbs': ['Chicken', 'Carrot', 'Potato'],
-  'Pork Afritada': ['Pork', 'Carrot', 'Potato'],
-  'Beef Tomato Stir-Fry': ['Beef', 'Tomato', 'Rice'],
-  'Tomato-Basil Chicken and Rice': ['Chicken', 'Tomato', 'Rice'],
-  'Mediterranean Pork And Tomato Rice': ['Pork', 'Tomato', 'Rice'],
-  'Rice, peas and beef mince': ['Beef', 'Peas', 'Rice'],
-  'Spanish Rice with Chicken & Peas': ['Chicken', 'Peas', 'Rice'],
-  'Hawaiian Pulled Pork Fried Rice with Peas': ['Pork', 'Peas', 'Rice'],
-  'Beef Fried Rice with Onion and Shredded Carrot': ['Beef', 'Carrot', 'Rice'],
-  'Chicken Carrot Pilaf': ['Chicken', 'Carrot', 'Rice'],
-  'Spicy Pork Bowl with Greens and Carrots': ['Pork', 'Carrot', 'Rice'],
-};
+const meals = [
+  {
+    name: 'Penne Pasta with Meat Sauce',
+    ingredients: ['Beef', 'Tomato', 'Pasta'],
+    url:
+      'https://static01.nyt.com/images/2020/04/15/dining/15Pasta-Meal-Sauce-a/15Pasta-Meal-Sauce-a-articleLarge-v2.jpg',
+  },
+  {
+    name: 'Chicken and tomato pasta bake recipe',
+    ingredients: ['Chicken', 'Tomato', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Pasta with Braised Pork',
+    ingredients: ['Pork', 'Tomato', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Rigatoni with slow-cooked beef and peas',
+    ingredients: ['Beef', 'Peas', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Creamy chicken and pea carbonara',
+    ingredients: ['Chicken', 'Peas', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Lemon Pork Medallions with Pasta and Peas',
+    ingredients: ['Pork', 'Peas', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Beef and Carrot Ragu',
+    ingredients: ['Beef', 'Carrot', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Chicken Pasta in Carrot Sauce',
+    ingredients: ['Chicken', 'Carrot', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Pork Stew With Pasta',
+    ingredients: ['Pork', 'Carrot', 'Pasta'],
+    url: '',
+  },
+  {
+    name: 'Italian Beef & Potato Stew',
+    ingredients: ['Beef', 'Tomato', 'Potato'],
+    url: '',
+  },
+  {
+    name: 'Paprika Chicken with Potatoes and Tomatoes',
+    ingredients: ['Chicken', 'Tomato', 'Potato'],
+    url: '',
+  },
+  {
+    name: 'Pork Chops In Tomato Sauce',
+    ingredients: ['Pork', 'Tomato', 'Potato'],
+    url: '',
+  },
+  { name: 'Keema Aloo', ingredients: ['Beef', 'Peas', 'Potato'], url: '' },
+  {
+    name: 'Chicken Breasts with Potatoes and Mashed Peas',
+    ingredients: ['Chicken', 'Peas', 'Potato'],
+    url: '',
+  },
+  {
+    name: 'Diced pork with potato and peas',
+    ingredients: ['Pork', 'Peas', 'Potato'],
+    url: '',
+  },
+  {
+    name: 'Pot Roast with Potatoes and Carrots',
+    ingredients: ['Beef', 'Carrot', 'Potato'],
+    url: '',
+  },
+  {
+    name: 'Baked Chicken, Potatoes, Carrots and Herbs',
+    ingredients: ['Chicken', 'Carrot', 'Potato'],
+    url: '',
+  },
+  { name: 'Pork Afritada', ingredients: ['Pork', 'Carrot', 'Potato'], url: '' },
+  {
+    name: 'Beef Tomato Stir-Fry',
+    ingredients: ['Beef', 'Tomato', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Tomato-Basil Chicken and Rice',
+    ingredients: ['Chicken', 'Tomato', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Mediterranean Pork And Tomato Rice',
+    ingredients: ['Pork', 'Tomato', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Rice, peas and beef mince',
+    ingredients: ['Beef', 'Peas', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Spanish Rice with Chicken & Peas',
+    ingredients: ['Chicken', 'Peas', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Hawaiian Pulled Pork Fried Rice with Peas',
+    ingredients: ['Pork', 'Peas', 'Rice'],
+    url:
+      'https://thymeforcocktails.com/wp-content/uploads/2016/04/Hawaiian-Pulled-Pork-Fried-Rice-2-1.jpg',
+  },
+  {
+    name: 'Beef Fried Rice with Onion and Shredded Carrot',
+    ingredients: ['Beef', 'Carrot', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Chicken Carrot Pilaf',
+    ingredients: ['Chicken', 'Carrot', 'Rice'],
+    url: '',
+  },
+  {
+    name: 'Spicy Pork Bowl with Greens and Carrots',
+    ingredients: ['Pork', 'Carrot', 'Rice'],
+    url: '',
+  },
+];
 
 class App extends React.Component {
   state = {
@@ -55,14 +153,14 @@ class App extends React.Component {
   }
 
   createMeal = (ingredients) => {
-    Object.values(ingredients);
-    Object.entries(meals).filter((meal) => {
-      if (
-        JSON.stringify(meal[1]) === JSON.stringify(Object.values(ingredients))
+    console.log(Object.values(ingredients));
+    console.log(
+      meals.filter(
+        (meal) =>
+          JSON.stringify(meal.ingredients) ===
+          JSON.stringify(Object.values(ingredients))
       )
-        console.log(meal[0]);
-      return true;
-    });
+    );
   };
 }
 
