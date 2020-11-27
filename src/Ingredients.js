@@ -10,12 +10,13 @@ class Ingredients extends React.Component {
   handleChange = (event) => {
     const { value } = event.target;
     console.log(value);
-    this.setState({[event.target.id]: value});
+    this.setState({ [event.target.id]: value });
   };
 
   render() {
     return (
       <form
+        id="ingredients"
         onSubmit={(event) => {
           event.preventDefault();
           // passing through the currents state i.e. the current ingredients, to the app in order to be accessed by the createMeal function
@@ -23,6 +24,7 @@ class Ingredients extends React.Component {
         }}
       >
         <label htmlFor="meat">Choose a meat:</label>
+        <br></br>
         <br></br>
         {/* onChange has to be on the select on a label form */}
         <select onChange={this.handleChange} name="meat" id="meat">
@@ -34,6 +36,7 @@ class Ingredients extends React.Component {
         <br></br>
         <label htmlFor="veg">Choose a vegetable:</label>
         <br></br>
+        <br></br>
         <select onChange={this.handleChange} name="veg" id="veg">
           <option value="Tomato">Tomato</option>
           <option value="Peas">Peas</option>
@@ -43,6 +46,7 @@ class Ingredients extends React.Component {
         <br></br>
         <label htmlFor="carbs">Choose a carbohydrate:</label>
         <br></br>
+        <br></br>
         <select onChange={this.handleChange} name="carbs" id="carbs">
           <option value="Pasta">Pasta</option>
           <option value="Potatoes">Potatoes</option>
@@ -51,6 +55,7 @@ class Ingredients extends React.Component {
         <br></br>
         <br></br>
         <label htmlFor="submit">Create your meal:</label>
+        <br></br>
         <br></br>
         <button id="submit" type="submit">
           Create

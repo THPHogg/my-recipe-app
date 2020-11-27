@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <br></br>
         <Ingredients meal={this.createMeal} />
         <Meal />
       </div>
